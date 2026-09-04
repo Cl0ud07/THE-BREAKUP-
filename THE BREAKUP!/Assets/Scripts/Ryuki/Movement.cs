@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private float speed = 5f;
+
     private Rigidbody2D body;
+    private Vector2 moveInput;
 
-    [SerializeField] private float speed;
-
-    private void Awake()
+    void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
@@ -17,7 +19,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        body.linearVelocity = new Vector2(moveHorizontal * speed, body.linearVelocity.y);
+        body.linearVelocity = moveInput * speed;
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
     }
 }
