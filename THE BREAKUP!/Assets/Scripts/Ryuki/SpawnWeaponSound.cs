@@ -11,6 +11,7 @@ public class SpawnWeaponSound : MonoBehaviour
 
     void Start()
     {
+        audioManager.PlaySFX(audioManager.gf);
         audioManager.PlaySFX(audioManager.weapon);
     }
 }
