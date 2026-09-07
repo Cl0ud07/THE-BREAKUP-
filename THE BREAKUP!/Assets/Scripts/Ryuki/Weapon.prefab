@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 5937137577971742441}
   - component: {fileID: 2411601565033474136}
   - component: {fileID: 7678898137099749678}
-  - component: {fileID: 6974443327370040461}
-  - component: {fileID: 5135918613357171529}
+  - component: {fileID: 8853016302182652292}
+  - component: {fileID: -3847322407817271791}
   m_Layer: 0
-  m_Name: Clothes
-  m_TagString: Clothes
+  m_Name: Weapon
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0.3969679, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +133,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.0021042228}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -154,10 +154,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 14.71
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 11.41
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -169,7 +169,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6974443327370040461
+--- !u!114 &8853016302182652292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,10 +178,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4957077479682106426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14fa808c791a78445bb40e97372f28ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 48335ea62aa975243b3fda12c192f263, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnClotheSound
---- !u!114 &5135918613357171529
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnWeaponSound
+--- !u!114 &-3847322407817271791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

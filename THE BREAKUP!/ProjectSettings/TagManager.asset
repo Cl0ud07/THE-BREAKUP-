@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Clothes
+  - Weapon
+  - Audio
   layers:
   - Default
   - TransparentFX
