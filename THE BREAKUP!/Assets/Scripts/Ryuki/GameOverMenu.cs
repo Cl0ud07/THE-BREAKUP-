@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] GameObject gameOverMenu;
+    [SerializeField] GameObject pauseButton;
 
     void Start()
     {
@@ -11,15 +12,21 @@ public class GameOverMenu : MonoBehaviour
     }
     public void Pause()
     {
-        gameOverMenu.SetActive(true);
-        Time.timeScale = 0;
+        if (gameOverMenu != null)
+        {
+            gameOverMenu.SetActive(true);
+            pauseButton.SetActive(false);
+            Time.timeScale = 0;
+        }
     }
 
     public void Home()
     {
-        SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1;
-
+        if (gameOverMenu != null)
+        {
+            SceneManager.LoadScene("MainMenu");
+            Time.timeScale = 1;
+        }
     }
 
     public void Restart()

@@ -20,15 +20,15 @@ public class SpawnManager : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         positions = new Vector2[positionNum];
-        positions[0] = new Vector2(0, 4.6f);
-        positions[1] = new Vector2(-3.35f, 4.6f);
-        positions[2] = new Vector2(3.35f, 4.6f);
-        positions[3] = new Vector2(0, 7.25f);
-        positions[4] = new Vector2(-3.35f, 7.25f);
-        positions[5] = new Vector2(3.35f, 7.25f);
-        positions[6] = new Vector2(0, 1.95f);
-        positions[7] = new Vector2(-3.35f, 1.95f);
-        positions[8] = new Vector2(3.35f, 1.95f);
+        positions[0] = new Vector2(0, 7.46f);
+        positions[1] = new Vector2(-3.35f, 7.46f);
+        positions[2] = new Vector2(3.35f, 7.46f);
+        positions[3] = new Vector2(0, 4.9f);
+        positions[4] = new Vector2(-3.35f, 4.9f);
+        positions[5] = new Vector2(3.35f, 4.9f);
+        positions[6] = new Vector2(0, 2.32f);
+        positions[7] = new Vector2(-3.35f, 2.32f);
+        positions[8] = new Vector2(3.35f, 2.32f);
 
         StartCoroutine(ShowObject());
     }
@@ -36,6 +36,8 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator ShowObject()
     {
+        Animator animator = GetComponent<Animator>();
+
         while (true)
         {
             var n = Random.Range(0, positions.Length);
@@ -46,6 +48,7 @@ public class SpawnManager : MonoBehaviour
             Instantiate(myPrefabs[randomObject], positions[n], Quaternion.identity);
             sr.enabled = true;
 
+            animator.Play("Throw", 0, 0f);
             yield return new WaitForSeconds(2f);
 
             sr.enabled = false;
