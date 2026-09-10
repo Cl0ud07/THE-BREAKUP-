@@ -818,7 +818,7 @@ MonoBehaviour:
   death: {fileID: 8300000, guid: 49efa8cf3db5af247b736a9968365135, type: 3}
   gf: {fileID: 8300000, guid: 554e7570e1a48c9478a5b7a029c63c7d, type: 3}
   clothes: {fileID: 8300000, guid: 0edb8f1ce6b289d40b5840341b510d6b, type: 3}
-  weapon: {fileID: 8300000, guid: bef12947a10dc0345be3dbfdbcb705bc, type: 3}
+  weapon: {fileID: 8300000, guid: 01e9a1de0a7fea74aba6821c337a5ef3, type: 3}
   walk: {fileID: 0}
   collected: {fileID: 8300000, guid: 1b274b5c985fd0c44957b8044214b808, type: 3}
   home: {fileID: 8300000, guid: 81ca1278eae25e94b88efa456f2c56e9, type: 3}

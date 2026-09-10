@@ -27,16 +27,23 @@ public class Movement_ProjectilePickup : MonoBehaviour
      {
          if (other.gameObject.CompareTag("Clothes"))
          {
+            FallGameOver fallScript = other.GetComponent<FallGameOver>();
+
+            if (fallScript != null)
+            {
+                fallScript.isCollected = true;
+            }
+
             Destroy(other.gameObject);
             audioManager.PlaySFX(audioManager.collected);
             cm.ClothesCount++;
          }
-        else if (other.gameObject.CompareTag("Weapon"))
-        {
+         else if (other.gameObject.CompareTag("Weapon"))
+         {
             Destroy(other.gameObject);
             audioManager.PlaySFX(audioManager.death);
             gameOverMenu.Pause();
-        }
+         }
      }
 
 }
