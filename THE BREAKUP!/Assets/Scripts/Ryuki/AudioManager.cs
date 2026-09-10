@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip weapon;
     public AudioClip walk;
     public AudioClip collected;
+    public AudioClip home;
+    public AudioClip retry;
+    public AudioClip resume;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

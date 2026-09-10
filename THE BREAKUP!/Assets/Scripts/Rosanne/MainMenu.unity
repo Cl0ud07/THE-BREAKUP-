@@ -153,10 +153,13 @@ MonoBehaviour:
   background: {fileID: 8300000, guid: 316690308e7b536428a75df1a0840906, type: 3}
   death: {fileID: 0}
   gf: {fileID: 0}
-  clothes: {fileID: 0}
+  clothes: {fileID: 8300000, guid: 81ca1278eae25e94b88efa456f2c56e9, type: 3}
   weapon: {fileID: 0}
   walk: {fileID: 0}
   collected: {fileID: 0}
+  home: {fileID: 0}
+  retry: {fileID: 0}
+  resume: {fileID: 0}
 --- !u!4 &1083811
 Transform:
   m_ObjectHideFlags: 0
