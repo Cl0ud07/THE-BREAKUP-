@@ -12,10 +12,12 @@ public class Movement : MonoBehaviour
 
     private Rigidbody2D body;
     private Vector2 moveInput;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,16 @@ public class Movement : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
+        }
+        if (moveInput.x == -1)
+        {
+            spriteRenderer.flipX = true;
+
+        }
+        else if (moveInput.x == 1)
+        {
+            spriteRenderer.flipX = false;
+
         }
     }
 }
