@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip background;
     public AudioClip death;
+    public AudioClip death2;
     public AudioClip gf;
     public AudioClip clothes;
     public AudioClip weapon;

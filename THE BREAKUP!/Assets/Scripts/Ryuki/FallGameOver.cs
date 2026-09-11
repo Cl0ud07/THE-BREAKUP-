@@ -28,7 +28,7 @@ public class FallGameOver : MonoBehaviour
 
         if (audioManager != null)
         {
-            audioManager.PlaySFX(audioManager.death);
+            audioManager.PlaySFX(audioManager.death2);
         }
 
         if (gameOverMenu != null)
